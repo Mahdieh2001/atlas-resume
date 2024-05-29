@@ -20,9 +20,9 @@ for (var i = 1; i <= 16; ++i) {
     var smallCircleR = createSmallCircle();
     var y = Math.sin((slice * i) * (Math.PI / 180)) * radius;
     var x = Math.cos((slice * i) * (Math.PI / 180)) * radius;
-    smallCircleL.style.top = (y + totalOffset + window.innerHeight / 2 - 460).toString() + "px";
+    smallCircleL.style.top = (y + totalOffset + window.innerHeight / 2 - 461).toString() + "px";
     smallCircleL.style.left = (x + totalOffset + window.innerWidth / 2 - 966).toString() + "px";
-    smallCircleR.style.top = (y + totalOffset + window.innerHeight / 2 - 460).toString() + "px";
+    smallCircleR.style.top = (y + totalOffset + window.innerHeight / 2 - 461).toString() + "px";
     smallCircleR.style.left = (x + totalOffset + window.innerWidth / 2 - 966).toString() + "px";
     circleL.appendChild(smallCircleL);
     circleR.appendChild(smallCircleR);
@@ -51,7 +51,7 @@ function moveCircles() {
         for (let i = 0; i < smallCircles.length; i++) {
             var y = Math.sin((slice * (i + 1) + j) * (Math.PI / 180)) * radius;
             var x = Math.cos((slice * (i + 1) + j) * (Math.PI / 180)) * radius;
-            smallCircles[i].style.top = (y + totalOffset + window.innerHeight / 2 - 460).toString() + "px";
+            smallCircles[i].style.top = (y + totalOffset + window.innerHeight / 2 - 461).toString() + "px";
             smallCircles[i].style.left = (x + totalOffset + window.innerWidth / 2 - 966).toString() + "px";
         }
     }

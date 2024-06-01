@@ -2,10 +2,6 @@ html {
   overflow: hidden;
 }
 
-.svg-container {
-  width: 810;
-  height: 810;
-}
 
 .circleL,
 .circleR {
@@ -273,8 +269,8 @@ html {
   .circleL,
   .circleR {
     position: absolute;
-    left: 3%;
-    top: 30%;
+    left: calc(50% - 150px);
+    top: calc(50% - 150px);
     transform: translate(-50%, -50%);
     transition: left 1s ease-out, transform 1s ease-out;
     transform: scale(0.37);
@@ -320,7 +316,7 @@ html {
 
     to {
       left: calc(100% - 150px);
-      top: 55%;
+      top: calc(95% - 300px);
       transform: translateX(-100%);
       transform: translateY(-50%);
       transform: scale(0.37);
@@ -361,23 +357,23 @@ html {
 
   .t1 {
     color: #161681;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     line-height: 24px;
     text-align: center;
     position: absolute;
-    top: 20%;
+    top: calc(10% + 65px);
     left: 50%;
     transform: translate(-50%, -50%);
   }
 
   @keyframes movet1Up {
     from {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 700;
       line-height: 24px;
       text-align: center;
-      top: 20%;
+      top: calc(10% + 65px);
     }
 
     to {
@@ -385,7 +381,7 @@ html {
       font-weight: 600;
       line-height: 24px;
       text-align: center;
-      top: 18%;
+      top: calc(10% + 65px);
       left: 73%;
       width: 150px;
     }
@@ -399,19 +395,19 @@ html {
     width: 200px;
     text-align: center;
     position: absolute;
-    top: 48%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
   
   @keyframes movet2Up {
     from {
-      top: 60%;
+      top: 50%;
     }
   
     to {
       font-size: 14px;
-      top: 23%;
+      top: calc(10% + 110px);
       left: 73%;
       width: 150px;
       line-height: 16px;
@@ -443,8 +439,8 @@ html {
     font-weight: 700;
     line-height: 38px;
     position: absolute;
-    top: 22%;
-    left: 20%;
+    top: calc(5% + 150px);
+    left: calc(0% + 75px);
     transform: translate(-50%, -50%);
     opacity: 0%;
     width: 150px;
@@ -457,8 +453,8 @@ html {
     font-weight: 700;
     line-height: 38px;
     position: absolute;
-    top: 72.5%;
-    left: 78%;
+    top: calc(95% - 150px);
+    left: calc(100% - 75px);
     transform: translate(-50%, -50%);
     opacity: 0%;
     width: 150px;
@@ -482,7 +478,7 @@ html {
     line-height: 26px;
     text-align: center;
     position: absolute;
-    top: 49%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;

@@ -1,5 +1,8 @@
+@import url(fontiran.css);
+
 body {
   overflow: hidden;
+  font-family: IRANSans !important;
 }
 
 
@@ -943,6 +946,7 @@ body {
     top: calc(10% + 65px);
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 250px;
   }
 
   @keyframes movet1Up {
@@ -1049,7 +1053,7 @@ body {
 
   .p1 {
     color: #3a3a3a;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 26px;
     text-align: center;
@@ -1220,7 +1224,7 @@ body {
 
   .t1 {
     color: #161681;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 700;
     line-height: 24px;
     text-align: center;
@@ -1253,7 +1257,7 @@ body {
 
   .t2 {
     color: #494949;
-    font-size: 40px;
+    font-size: 36px;
     font-weight: 400;
     line-height: 55px;
     width: 320px;

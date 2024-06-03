@@ -27,3 +27,5 @@ function moveCircles() {
     whatsapp.style.animation = 'showwhatsapp 1.5s forwards';
     instagram.style.animation = 'showinstagram 1.5s forwards';
 }
+
+window.onresize = function(){ location.reload(); }

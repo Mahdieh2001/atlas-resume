@@ -1,4 +1,4 @@
-html {
+body {
   overflow: hidden;
 }
 
@@ -1977,3 +1977,280 @@ html {
 }
 
 }
+
+
+@media only screen and (min-width: 1441px) {
+  
+  .circleL,
+  .circleR {
+    position: absolute;
+    left: calc(50% - 405px);
+    top: calc(50% - 405px);
+    transform: translate(-50%, -50%);
+    transition: left 1s ease-out, transform 1s ease-out;
+    transform: scale(1);
+    width: 810;
+    height: 810;
+  }
+  
+  @keyframes moveLeft {
+    from {
+      left: calc(50% - 405px);
+      transform: translateX(-50%);
+      transform: translateY(-50%);
+      transform: scale(1);
+      width: 810;
+      height: 810;
+    }
+  
+    to {
+      left: calc(0% - 405px);
+      transform: translateX(0);
+      transform: translateY(-50%);
+      transform: scale(1);
+      width: 810;
+      height: 810;
+    }
+  }
+  
+  @keyframes moveRight {
+    from {
+      left: calc(50% - 405px);
+      transform: translateX(0);
+      transform: translateY(-50%);
+      transform: scale(1);
+      width: 810;
+      height: 810;
+    }
+  
+    to {
+      left: calc(100% - 405px);
+      transform: translateX(-100%);
+      transform: translateY(-50%);
+      transform: scale(1);
+      width: 810;
+      height: 810;
+    }
+  }
+  
+  .move-left {
+    animation: moveLeft 2s forwards;
+  }
+  
+  .move-right {
+    animation: moveRight 2s forwards;
+  }
+  
+  
+  .logo {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 153px;
+    width: 295px;
+  }
+  
+  @keyframes moveLogoUp {
+    from {
+      top: 35%;
+      height: 153px;
+      width: 295px;
+    }
+  
+    to {
+      top: 13%;
+    }
+  }
+  
+  .t1 {
+    color: #161681;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 31.2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  @keyframes movet1Up {
+    from {
+      top: 50%;
+      /* Initial position */
+    }
+  
+    to {
+      top: 25%;
+    }
+  }
+  
+  .t2 {
+    color: #494949;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 26px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  @keyframes movet2Up {
+    from {
+      top: 60%;
+      /* Initial position */
+    }
+  
+    to {
+      top: 30%;
+    }
+  }
+  
+  .p1 {
+    color: #3a3a3a;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 40px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    width: 600px;
+  }
+  
+  @keyframes showp1 {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 100%;
+    }
+  }
+  
+  .logoo {
+    position: absolute;
+    top: calc(50% + 300px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 36px;
+    width: 132px;
+  }
+  
+  @keyframes moveLogooUp {
+    from {
+      top: calc(50% + 300px);
+      /* Initial position */
+    }
+  
+    to {
+      top: 87%;
+    }
+  }
+  
+  .linkedin {
+    position: absolute;
+    top: 95%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transform: scale(2);
+  }
+  
+  @keyframes showlinkedin {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 100%;
+    }
+  }
+  
+  .whatsapp {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transform: scale(2);
+  }
+  
+  @keyframes showwhatsapp {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 100%;
+    }
+  }
+  
+  .instagram {
+    position: absolute;
+    top: 95%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transform: scale(2);
+  }
+  
+  @keyframes showinstagram {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 100%;
+    }
+  }
+  
+  .p2 {
+    color: #161681;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 54.6px;
+    position: absolute;
+    top: 50%;
+    left: calc(0% + 155px);
+    transform: translate(-50%, -50%);
+    opacity: 0%;
+  }
+  
+  @keyframes showp2 {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 100%;
+    }
+  }
+  
+  .p3 {
+    color: #161681;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 54.6px;
+    position: absolute;
+    top: 50%;
+    left: calc(100% - 130px);
+    width: 160px;
+    transform: translate(-50%, -50%);
+    opacity: 0%;
+  }
+  
+  @keyframes showp3 {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 100%;
+    }
+  }
+  
+  }

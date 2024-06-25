@@ -45,6 +45,7 @@ function moveCircleLL() {
     const linkedin = document.querySelector('.linkedin');
     const whatsapp = document.querySelector('.whatsapp');
     const instagram = document.querySelector('.instagram');
+    const btncontainer = document.querySelector('.btncontainer');
     const diskmenu = document.querySelector('.diskmenu');
     // const home = document.querySelector('.home');
 
@@ -60,6 +61,7 @@ function moveCircleLL() {
     linkedin.style.animation = 'movelinkedin 2s forwards';
     whatsapp.style.animation = 'movewhatsapp 2s forwards';
     instagram.style.animation = 'moveinstagram 2s forwards';
+    btncontainer.style.animation = 'showbtn 2s forwards';
     diskmenu.style.animation = 'showdisk 2s forwards';
     // home.style.animation = 'moveH 2s forwards';
 }
@@ -77,6 +79,8 @@ function moveCircleRR() {
     const linkedin = document.querySelector('.linkedin');
     const whatsapp = document.querySelector('.whatsapp');
     const instagram = document.querySelector('.instagram');
+    const diskm = document.querySelector('.disk-menu');
+    const btncontainer = document.querySelector('.controls');
     // const home = document.querySelector('.home');
 
     circleLLR.style.animation = 'moveLLR 2s forwards';
@@ -91,6 +95,8 @@ function moveCircleRR() {
     linkedin.style.animation = 'movelinkedin 2s forwards';
     whatsapp.style.animation = 'movewhatsapp 2s forwards';
     instagram.style.animation = 'moveinstagram 2s forwards';
+    diskm.style.animation = 'showdiskm 2s forwards';
+    btncontainer.style.animation = 'showcontrols 2s forwards';
     // home.style.animation = 'moveH 2s forwards';
 }
 
@@ -118,3 +124,28 @@ function updateItemsPosition() {
 }
 
 updateItemsPosition(); // Initialize item positions
+
+const elements = document.querySelectorAll('.element');
+const radiusr = 680; // Radius of the disc
+let angler = 0;
+
+function rotateElementsUp() {
+  angler += 30; // Adjust the rotation angle as needed
+  updateElementsPosition();
+}
+
+function rotateElementsDown() {
+  angler -= 30; // Adjust the rotation angle as needed
+  updateElementsPosition();
+}
+
+function updateElementsPosition() {
+  elements.forEach((element, index) => {
+    const itemAngle = (angler + 360 / elements.length * index) % 360;
+    const itemX = radius * Math.cos(itemAngle * Math.PI / 180);
+    const itemY = radius * Math.sin(itemAngle * Math.PI / 180);
+    element.style.transform = `translate(${itemX}px, ${itemY}px)`;
+  });
+}
+
+updateElementsPosition(); // Initialize item positions

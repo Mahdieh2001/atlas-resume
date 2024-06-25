@@ -497,6 +497,81 @@ body {
 }
 }
 @media only screen and (min-width: 1025px) {
+
+  .wrapper-item {
+    display: flex;
+    align-items: center;
+  }
+  .number {
+    font-size: 96px;
+  }
+  .text {
+    font-size: 48px;
+    margin-right: 80px;
+  }
+  .controls {
+    display: flex;
+    justify-content: flex-start; /* Align items to the right */
+    padding-left: 20px; /* Add some right padding */
+    visibility: hidden;
+  }
+  @keyframes showcontrols {
+    from {
+      visibility: hidden;
+      opacity: 0%;
+    }
+    to {
+      opacity: 100%;
+      visibility: visible;
+    }
+  }
+  .circle {
+    width: 1360px; /* Diameter = 2 * radius */
+    height: 1360px; /* Same as diameter for a perfect circle */
+    border: 0px solid #333;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* Position absolutely on the screen */
+    margin-top: calc(50vh - 740px); /* Center vertically on the screen with a 650px offset */
+    left: calc(100% - 300px); /* Center horizontally on the screen */
+    transform: translateX(-50%); /* Center horizontally with a negative margin */
+    transition: transform 0.5s ease-in-out; /* Smooth animation for item movement */
+}
+
+.element {
+  padding-left: 350px;
+  position: absolute;
+  width: 700px;
+  height: 50px;
+  background: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  transform-origin: 50%;
+  /* Rotate around the center of the item */
+  transition: transform 0.5s ease-in-out;
+  /* Smooth animation for item movement */
+  font-size: 97px;
+  white-space: nowrap; /* Ensure the content appears on one line */
+}
+
+.disk-menu{
+  visibility: hidden;
+}
+@keyframes showdiskm {
+  from {
+    visibility: hidden;
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+    visibility: visible;
+  }
+}
+
   .container-item{
     display: flex;
     align-items: center;
@@ -508,12 +583,22 @@ body {
     font-size: 48px;
     margin-left: 80px;
   }
-  .container {
+  .btncontainer {
     display: flex;
     justify-content: flex-end; /* Align items to the right */
     padding-right: 20px; /* Add some right padding */
+    visibility: hidden;
   }
-
+  @keyframes showbtn {
+    from {
+      visibility: hidden;
+      opacity: 0%;
+    }
+    to {
+      opacity: 100%;
+      visibility: visible;
+    }
+  }
   .disc {
     width: 1360px; /* Diameter = 2 * radius */
     height: 1360px; /* Same as diameter for a perfect circle */

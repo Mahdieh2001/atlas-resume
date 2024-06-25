@@ -497,6 +497,68 @@ body {
 }
 }
 @media only screen and (min-width: 1025px) {
+  .container-item{
+    display: flex;
+    align-items: center;
+  }
+  .item-num{
+    font-size: 96px;
+  }
+  .item-text{
+    font-size: 48px;
+    margin-left: 80px;
+  }
+  .container {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    padding-right: 20px; /* Add some right padding */
+  }
+
+  .disc {
+    width: 1360px; /* Diameter = 2 * radius */
+    height: 1360px; /* Same as diameter for a perfect circle */
+    border: 0px solid #333;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* Position absolutely on the screen */
+    margin-top: calc(50vh - 680px); /* Center vertically on the screen with a 650px offset */
+    left: 0%; /* Center horizontally on the screen */
+    transform: translateX(-50%); /* Center horizontally with a negative margin */
+    transition: transform 0.5s ease-in-out; /* Smooth animation for item movement */
+}
+
+.item {
+  padding-left: 350px;
+  position: absolute;
+  width: 700px;
+  height: 50px;
+  background: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  transform-origin: 50%;
+  /* Rotate around the center of the item */
+  transition: transform 0.5s ease-in-out;
+  /* Smooth animation for item movement */
+  font-size: 97px;
+  white-space: nowrap; /* Ensure the content appears on one line */
+}
+  .diskmenu{
+    visibility: hidden;
+  }
+  @keyframes showdisk {
+    from {
+      visibility: hidden;
+      opacity: 0%;
+    }
+    to {
+      opacity: 100%;
+      visibility: visible;
+    }
+  }
 .circleL,
 .circleR {
   left: calc(50% - 405px);

@@ -45,6 +45,7 @@ function moveCircleLL() {
     const linkedin = document.querySelector('.linkedin');
     const whatsapp = document.querySelector('.whatsapp');
     const instagram = document.querySelector('.instagram');
+    const diskmenu = document.querySelector('.diskmenu');
     // const home = document.querySelector('.home');
 
     circleLL.style.animation = 'moveLL 2s forwards';
@@ -59,6 +60,7 @@ function moveCircleLL() {
     linkedin.style.animation = 'movelinkedin 2s forwards';
     whatsapp.style.animation = 'movewhatsapp 2s forwards';
     instagram.style.animation = 'moveinstagram 2s forwards';
+    diskmenu.style.animation = 'showdisk 2s forwards';
     // home.style.animation = 'moveH 2s forwards';
 }
 
@@ -91,3 +93,28 @@ function moveCircleRR() {
     instagram.style.animation = 'moveinstagram 2s forwards';
     // home.style.animation = 'moveH 2s forwards';
 }
+
+const items = document.querySelectorAll('.item');
+const radius = 680; // Radius of the disc
+let angle = 0;
+
+function moveItemsUp() {
+  angle += 30; // Adjust the rotation angle as needed
+  updateItemsPosition();
+}
+
+function moveItemsDown() {
+  angle -= 30; // Adjust the rotation angle as needed
+  updateItemsPosition();
+}
+
+function updateItemsPosition() {
+  items.forEach((item, index) => {
+    const itemAngle = (angle + 360 / items.length * index) % 360;
+    const itemX = radius * Math.cos(itemAngle * Math.PI / 180);
+    const itemY = radius * Math.sin(itemAngle * Math.PI / 180);
+    item.style.transform = `translate(${itemX}px, ${itemY}px)`;
+  });
+}
+
+updateItemsPosition(); // Initialize item positions

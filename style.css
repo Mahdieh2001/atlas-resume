@@ -535,7 +535,7 @@ body {
     align-items: center;
     position: absolute; /* Position absolutely on the screen */
     margin-top: calc(50vh - 740px); /* Center vertically on the screen with a 650px offset */
-    left: calc(100% - 300px); /* Center horizontally on the screen */
+    left: calc(100% - 350px); /* Center horizontally on the screen */
     transform: translateX(-50%); /* Center horizontally with a negative margin */
     transition: transform 0.5s ease-in-out; /* Smooth animation for item movement */
 }
@@ -608,7 +608,7 @@ body {
     justify-content: center;
     align-items: center;
     position: absolute; /* Position absolutely on the screen */
-    margin-top: calc(50vh - 680px); /* Center vertically on the screen with a 650px offset */
+    margin-top: calc(50vh - 700px); /* Center vertically on the screen with a 650px offset */
     left: 0%; /* Center horizontally on the screen */
     transform: translateX(-50%); /* Center horizontally with a negative margin */
     transition: transform 0.5s ease-in-out; /* Smooth animation for item movement */

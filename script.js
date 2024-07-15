@@ -45,7 +45,10 @@ function moveCircleLL() {
     const linkedin = document.querySelector('.linkedin');
     const whatsapp = document.querySelector('.whatsapp');
     const instagram = document.querySelector('.instagram');
-    const btncontainer = document.querySelector('.btncontainer');
+    // const btncontainer = document.querySelector('.btncontainer');
+    const arrUpL = document.querySelector('.arrUpL');
+    const biL = document.querySelector('.bi-houseL');
+    const arrDoL = document.querySelector('.arrDoL');
     const diskmenu = document.querySelector('.diskmenu');
     // const home = document.querySelector('.home');
 
@@ -61,7 +64,10 @@ function moveCircleLL() {
     linkedin.style.animation = 'movelinkedin 2s forwards';
     whatsapp.style.animation = 'movewhatsapp 2s forwards';
     instagram.style.animation = 'moveinstagram 2s forwards';
-    btncontainer.style.animation = 'showbtn 2s forwards';
+    // btncontainer.style.animation = 'showbtn 2s forwards';
+    arrUpL.style.animation = 'showarrUpL 2s forwards';
+    biL.style.animation = 'showbi-houseL 2s forwards';
+    arrDoL.style.animation = 'showarrDoL 2s forwards';
     diskmenu.style.animation = 'showdisk 2s forwards';
     // home.style.animation = 'moveH 2s forwards';
 }
@@ -80,7 +86,9 @@ function moveCircleRR() {
     const whatsapp = document.querySelector('.whatsapp');
     const instagram = document.querySelector('.instagram');
     const diskm = document.querySelector('.disk-menu');
-    const btncontainer = document.querySelector('.controls');
+    const arrUpR = document.querySelector('.arrUpR');
+    const bi = document.querySelector('.bi-house');
+    const arrDoR = document.querySelector('.arrDoR');
     // const home = document.querySelector('.home');
 
     circleLLR.style.animation = 'moveLLR 2s forwards';
@@ -96,12 +104,21 @@ function moveCircleRR() {
     whatsapp.style.animation = 'movewhatsapp 2s forwards';
     instagram.style.animation = 'moveinstagram 2s forwards';
     diskm.style.animation = 'showdiskm 2s forwards';
-    btncontainer.style.animation = 'showcontrols 2s forwards';
+    arrUpR.style.animation = 'showarrUpR 2s forwards';
+    bi.style.animation = 'showbi-house 2s forwards';
+    arrDoR.style.animation = 'showarrDoR 2s forwards';
     // home.style.animation = 'moveH 2s forwards';
 }
 
 const items = document.querySelectorAll('.item');
-const radius = 680; // Radius of the disc
+radius = 680; // Radius of the disc
+if (window.innerWidth > 2559 ) {
+  var radius = 1000; // Radius of the disc
+}else if (window.innerWidth < 426 ) {
+  var radius = 200; // Radius of the disc
+}else if (425 < window.innerWidth && window.innerWidth < 1025 ) {
+  var radius = 400; // Radius of the disc
+}
 let angle = 0;
 
 function moveItemsUp() {
@@ -125,8 +142,21 @@ function updateItemsPosition() {
 
 updateItemsPosition(); // Initialize item positions
 
+
+
+
+
+
+
 const elements = document.querySelectorAll('.element');
-const radiusr = 680; // Radius of the disc
+radius = 680; // Radius of the disc
+if (window.innerWidth > 2559 ) {
+  var radius = 1000; // Radius of the disc
+}else if (window.innerWidth < 426 ) {
+  var radius = 200; // Radius of the disc
+}else if (425 < window.innerWidth && window.innerWidth < 1025 ) {
+  var radius = 400; // Radius of the disc
+}
 let angler = 0;
 
 function rotateElementsUp() {

@@ -179,6 +179,344 @@ body {
   }
 }
 @media only screen and (max-width: 425px) {
+
+.bi-house{
+  top: calc(50% - 50px);
+  left: 10%;
+  position:absolute;
+  visibility: hidden;
+}
+.arrUpR{
+  top: calc(50% - 155px);
+  left: 10%;
+  position: absolute;
+  visibility: hidden;
+}
+.arrDoR{
+  top: calc(50% + 65px);
+  left: 10%;
+  position: absolute;
+  visibility: hidden;
+}
+.bi-houseL{
+  top: calc(50% - 50px);
+  left: calc(90% - 100px);
+  position:absolute;
+  visibility: hidden;
+}
+.arrUpL{
+  top: calc(50% - 155px);
+  left: calc(90% - 100px);
+  position: absolute;
+  visibility: hidden;
+}
+.arrDoL{
+  top: calc(50% + 65px);
+  left: calc(90% - 100px);
+  position: absolute;
+  visibility: hidden;
+}
+.wrapper-item {
+  display: flex;
+  align-items: center;
+}
+.number {
+  font-size: 96px;
+}
+.text {
+  font-size: 48px;
+  margin-right: 30px;
+}
+.controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 20px;
+  visibility: hidden;
+  align-items: 20%;
+}
+@keyframes showarrUpR {
+  from {
+    visibility: hidden;
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+    visibility: visible;
+  }
+}
+@keyframes showbi-house {
+  from {
+    visibility: hidden;
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+    visibility: visible;
+  }
+}
+@keyframes showarrDoR {
+  from {
+    visibility: hidden;
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+    visibility: visible;
+  }
+}
+@keyframes showarrUpL {
+  from {
+    visibility: hidden;
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+    visibility: visible;
+  }
+}
+@keyframes showbi-houseL {
+  from {
+    visibility: hidden;
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+    visibility: visible;
+  }
+}
+@keyframes showarrDoL {
+  from {
+    visibility: hidden;
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+    visibility: visible;
+  }
+}
+.circle {
+  width: 400px; /* Diameter = 2 * radius */
+  height: 400px; /* Same as diameter for a perfect circle */
+  border: 0px solid #333;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute; /* Position absolutely on the screen */
+  margin-top: calc(50vh - 200px); /* Center vertically on the screen with a 650px offset */
+  left: calc(100% - 350px); /* Center horizontally on the screen */
+  transform: translateX(-50%); /* Center horizontally with a negative margin */
+  transition: transform 0.5s ease-in-out; /* Smooth animation for item movement */
+}
+
+.element {
+padding-left: 350px;
+position: absolute;
+width: 700px;
+height: 50px;
+background: none;
+border-radius: 50%;
+display: flex;
+justify-content: right;
+align-items: center;
+transform-origin: 50%;
+transition: transform 0.5s ease-in-out;
+font-size: 97px;
+white-space: nowrap; /* Ensure the content appears on one line */
+}
+
+.disk-menu{
+visibility: hidden;
+}
+@keyframes showdiskm {
+from {
+  visibility: hidden;
+  opacity: 0%;
+}
+to {
+  opacity: 100%;
+  visibility: visible;
+}
+}
+
+.container-item{
+  display: flex;
+  align-items: center;
+}
+.item-num{
+  font-size: 96px;
+}
+.item-text{
+  font-size: 48px;
+  margin-left: 30px;
+}
+.btncontainer {
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  padding-right: 20px; /* Add some right padding */
+  /* visibility: hidden; */
+}
+@keyframes showbtn {
+  from {
+    visibility: hidden;
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+    visibility: visible;
+  }
+}
+.disc {
+  width: 400px; /* Diameter = 2 * radius */
+  height: 400px; /* Same as diameter for a perfect circle */
+  border: 0px solid #333;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute; /* Position absolutely on the screen */
+  margin-top: calc(50vh - 200px); /* Center vertically on the screen with a 650px offset */
+  left: 0%; /* Center horizontally on the screen */
+  transform: translateX(-50%); /* Center horizontally with a negative margin */
+  transition: transform 0.5s ease-in-out; /* Smooth animation for item movement */
+}
+
+.item {
+padding-left: 350px;
+position: absolute;
+width: 700px;
+height: 50px;
+background: none;
+border-radius: 50%;
+display: flex;
+justify-content: left;
+align-items: center;
+transform-origin: 50%;
+/* Rotate around the center of the item */
+transition: transform 0.5s ease-in-out;
+/* Smooth animation for item movement */
+font-size: 97px;
+white-space: nowrap; /* Ensure the content appears on one line */
+}
+.diskmenu{
+  visibility: hidden;
+}
+@keyframes showdisk {
+  from {
+    visibility: hidden;
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+    visibility: visible;
+  }
+}
+.circleL,
+.circleR {
+left: calc(50% - 405px);
+top: calc(50% - 405px);
+transform: scale(0.8);
+width: 648;
+height: 648;
+}
+@keyframes moveLeft {
+0% {
+  visibility: visible;
+}
+70% {
+  left: calc(0% - 405px);
+  rotate: 90deg;
+}
+100% {
+  visibility: hidden;
+  left: calc(0% - 405px);
+  rotate: 90deg;
+}
+}
+@keyframes moveRight {
+0% {
+}
+70% {
+  left: calc(100% - 405px);
+  rotate: -90deg;
+}
+100%{
+  left: calc(100% - 405px);
+  rotate: -90deg;
+  visibility: hidden;
+}
+}
+.circleLL,
+.circleRR {
+top: calc(50% - 405px);
+transform: scale(0.8);
+width: 648;
+height: 648;
+visibility: hidden;
+}
+.circleLL{
+  left: calc(0% - 405px);
+}
+.circleRR{
+left: calc(100% - 405px);
+}
+@keyframes showR {
+0% {
+}
+70% {
+  visibility: hidden;
+}
+100%{
+  visibility: visible;
+}
+}
+@keyframes showL {
+0% {
+}
+70% {
+  visibility: hidden;
+}
+100%{
+  visibility: visible;
+}
+}
+@keyframes moveRR {
+from {
+  opacity: 100%;
+  visibility: visible;
+}
+to {
+    visibility: hidden;
+    opacity: 0%;
+}
+}
+@keyframes moveLL {
+from {
+}
+to {
+    transform: scale(1.5);
+    visibility: visible;
+}
+}
+@keyframes moveLLR {
+from {
+  opacity: 100%;
+  visibility: visible;
+}
+to {
+    visibility: hidden;
+    opacity: 0%;
+}
+}
+@keyframes moveRRR {
+from {
+}
+to {
+    transform: scale(1.5);
+    visibility: visible;
+}
+}
   .circleL,
   .circleR {
     left: calc(50% - 150px);
@@ -189,17 +527,26 @@ body {
     height: 300;
   }
   @keyframes moveLeft {
-    from {
+    0% {
+      visibility: visible;
     }
-    to {
+    70% {
+      left: calc(0% - 150px);
+    }
+    100% {
+      visibility: hidden;
       left: calc(0% - 150px);
     }
   }
   @keyframes moveRight {
-    from {
+    0% {
     }
-    to {
+    70% {
       left: calc(100% - 150px);
+    }
+    100%{
+      left: calc(100% - 150px);
+      visibility: hidden;
     }
   }
   .logo {
@@ -207,6 +554,78 @@ body {
     height: 66px;
     width: 127.5px;
   }
+.circleLL,
+.circleRR {
+  top: calc(60% - 150px);
+  transform: scale(0.37);
+  width: 300;
+  height: 300;
+  visibility: hidden;
+}
+.circleLL{
+  left: calc(0% - 150px);
+}
+.circleRR{
+  left: calc(100% - 150px);
+}
+@keyframes showR {
+  0% {
+  }
+  70% {
+    visibility: hidden;
+  }
+  100%{
+    visibility: visible;
+  }
+}
+@keyframes showL {
+  0% {
+  }
+  70% {
+    visibility: hidden;
+  }
+  100%{
+    visibility: visible;
+  }
+}
+@keyframes moveRR {
+  from {
+    opacity: 100%;
+    visibility: visible;
+  }
+  to {
+      visibility: hidden;
+      opacity: 0%;
+  }
+}
+@keyframes moveLL {
+  from {
+  }
+  to {
+      transform: scale(0.37);
+      visibility: visible;
+      top: calc(50% - 150px);
+  }
+}
+@keyframes moveLLR {
+  from {
+    opacity: 100%;
+    visibility: visible;
+  }
+  to {
+      visibility: hidden;
+      opacity: 0%;
+  }
+}
+@keyframes moveRRR {
+  from {
+  }
+  to {
+      transform: scale(0.37);
+      visibility: visible;
+      top: calc(50% - 150px);
+  }
+}
   @keyframes moveLogoUp {
     from {
     }
@@ -281,31 +700,360 @@ body {
   }
 }
 @media only screen and (min-width: 426px) and (max-width: 1024px) {
-  .circleL,
-  .circleR {
-    left: calc(50% - 282.5px);
-    top: calc(50% - 282.5px);
-    transform: scale(0.697);
-    transform-origin: 0 0;
-    width: 565;
-    height: 565;
+  
+.bi-house{
+  top: calc(0% + 50px);
+  left: calc(0% + 50px);
+  height: 50px;
+  width: 50px;
+  position:absolute;
+  visibility: hidden;
+}
+.arrUpR{
+  top: calc(0% + 0px);
+  left: calc(0% + 50px);
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  visibility: hidden;
+}
+.arrDoR{
+  top: calc(0% + 105px);
+  left: calc(0% + 50px);
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  visibility: hidden;
+}
+.bi-houseL{
+  top: calc(0% + 50px);
+  left: calc(100% - 100px);
+  height: 50px;
+  width: 50px;
+  position:absolute;
+  visibility: hidden;
+}
+.arrUpL{
+  top: calc(0% + 0px);
+  left: calc(100% - 100px);
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  visibility: hidden;
+}
+.arrDoL{
+  top: calc(0% + 105px);
+  left: calc(100% - 100px);
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  visibility: hidden;
+}
+.wrapper-item {
+  display: flex;
+  align-items: center;
+}
+.number {
+  font-size: 40px;
+}
+.text {
+  font-size: 30px;
+  margin-right: 30px;
+}
+.controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 20px;
+  visibility: hidden;
+  align-items: 20%;
+}
+@keyframes showarrUpR {
+  from {
+    visibility: hidden;
+    opacity: 0%;
   }
-  @keyframes moveLeft {
-    from {
-    }
-    to {
-      left: calc(0% - 282.5px);
-      top: calc(60% - 282.5px);
-    }
+  to {
+    opacity: 100%;
+    visibility: visible;
   }
-  @keyframes moveRight {
-    from {
-    }
-    to {
-      left: calc(100% - 282.5px);
-      top: calc(60% - 282.5px);
-    }
+}
+@keyframes showbi-house {
+  from {
+    visibility: hidden;
+    opacity: 0%;
   }
+  to {
+    opacity: 100%;
+    visibility: visible;
+  }
+}
+@keyframes showarrDoR {
+  from {
+    visibility: hidden;
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+    visibility: visible;
+  }
+}
+@keyframes showarrUpL {
+  from {
+    visibility: hidden;
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+    visibility: visible;
+  }
+}
+@keyframes showbi-houseL {
+  from {
+    visibility: hidden;
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+    visibility: visible;
+  }
+}
+@keyframes showarrDoL {
+  from {
+    visibility: hidden;
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+    visibility: visible;
+  }
+}
+.circle {
+  width: 800px; /* Diameter = 2 * radius */
+  height: 800px; /* Same as diameter for a perfect circle */
+  border: 0px solid #333;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute; /* Position absolutely on the screen */
+  margin-top: calc(60vh - 400px); /* Center vertically on the screen with a 650px offset */
+  left: calc(100% - 50px); /* Center horizontally on the screen */
+  transform: translateX(-50%); /* Center horizontally with a negative margin */
+  transition: transform 0.5s ease-in-out; /* Smooth animation for item movement */
+}
+
+.element {
+padding-left: 350px;
+position: absolute;
+width: 400px;
+height: 50px;
+background: none;
+border-radius: 50%;
+display: flex;
+justify-content: right;
+align-items: center;
+transform-origin: 50%;
+transition: transform 0.5s ease-in-out;
+font-size: 97px;
+white-space: nowrap; /* Ensure the content appears on one line */
+}
+
+.disk-menu{
+visibility: hidden;
+}
+@keyframes showdiskm {
+from {
+  visibility: hidden;
+  opacity: 0%;
+}
+to {
+  opacity: 100%;
+  visibility: visible;
+}
+}
+
+.container-item{
+  display: flex;
+  align-items: center;
+}
+.item-num{
+  font-size: 40px;
+}
+.item-text{
+  font-size: 30px;
+  margin-left: 30px;
+}
+.btncontainer {
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  padding-right: 20px; /* Add some right padding */
+  /* visibility: hidden; */
+}
+@keyframes showbtn {
+  from {
+    visibility: hidden;
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+    visibility: visible;
+  }
+}
+.disc {
+  width: 800px; /* Diameter = 2 * radius */
+  height: 800px; /* Same as diameter for a perfect circle */
+  border: 0px solid #333;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute; /* Position absolutely on the screen */
+  margin-top: calc(60vh - 400px); /* Center vertically on the screen with a 650px offset */
+  left: calc(0% - 150px); /* Center horizontally on the screen */
+  transform: translateX(-50%); /* Center horizontally with a negative margin */
+  transition: transform 0.5s ease-in-out; /* Smooth animation for item movement */
+}
+
+.item {
+padding-left: 350px;
+position: absolute;
+width: 700px;
+height: 50px;
+background: none;
+border-radius: 50%;
+display: flex;
+justify-content: left;
+align-items: center;
+transform-origin: 50%;
+/* Rotate around the center of the item */
+transition: transform 0.5s ease-in-out;
+/* Smooth animation for item movement */
+font-size: 97px;
+white-space: nowrap; /* Ensure the content appears on one line */
+}
+.diskmenu{
+  visibility: hidden;
+}
+@keyframes showdisk {
+  from {
+    visibility: hidden;
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+    visibility: visible;
+  }
+}
+.circleL,
+.circleR {
+left: calc(50% - 405px);
+top: calc(50% - 405px);
+transform: scale(0.617);
+width: 500;
+height: 500;
+}
+@keyframes moveLeft {
+0% {
+  visibility: visible;
+}
+70% {
+  left: calc(0% - 405px);
+  top: calc(60% - 405px);
+}
+100% {
+  visibility: hidden;
+  left: calc(0% - 405px);
+  top: calc(60% - 405px);
+}
+}
+@keyframes moveRight {
+0% {
+}
+70% {
+  left: calc(100% - 405px);
+  top: calc(60% - 405px);
+}
+100%{
+  left: calc(100% - 405px);
+  top: calc(60% - 405px);
+  visibility: hidden;
+}
+}
+.circleLL,
+.circleRR {
+top: calc(60% - 405px);
+transform: scale(0.617);
+width: 500;
+height: 500;
+visibility: hidden;
+}
+.circleLL{
+  left: calc(0% - 405px);
+}
+.circleRR{
+left: calc(100% - 405px);
+}
+@keyframes showR {
+0% {
+}
+70% {
+  visibility: hidden;
+}
+100%{
+  visibility: visible;
+}
+}
+@keyframes showL {
+0% {
+}
+70% {
+  visibility: hidden;
+}
+100%{
+  visibility: visible;
+}
+}
+@keyframes moveRR {
+from {
+  opacity: 100%;
+  visibility: visible;
+}
+to {
+    visibility: hidden;
+    opacity: 0%;
+}
+}
+@keyframes moveLL {
+  from {
+    transform: scale(0.617);
+  }
+  to {
+      transform: scale(0.9);
+      left: calc(0% - 550px);
+      visibility: visible;
+  }
+}
+@keyframes moveLLR {
+  from {
+    opacity: 100%;
+    visibility: visible;
+  }
+  to {
+      visibility: hidden;
+      opacity: 0%;
+  }
+}
+@keyframes moveRRR {
+  from {
+    transform: scale(0.617);
+  }
+  to {
+    transform: scale(0.9);
+    left: calc(100% - 260px);
+    visibility: visible;
+  }
+}
   .logo {
     top: calc(50% - 60px);
     height: 57.2px;
@@ -320,6 +1068,20 @@ body {
       top: calc(10%)
     }
   }
+@keyframes moveLogo {
+  from {
+    height: 66px;
+    width: 127.5px;
+    top: calc(10%)
+  }
+  to {
+      visibility: hidden;
+      opacity: 0%;
+      height: 66px;
+      width: 127.5px;
+      top: calc(10%)
+  }
+}
   .t1 {
     font-size: 20px;
     line-height: 24px;
@@ -335,7 +1097,7 @@ body {
     }
   }
   .t2 {
-    top: calc(50% + 30px);
+    top: calc(50% + 50px);
     font-size: 18px;
     line-height: 20px;
     width: 270px;
@@ -351,7 +1113,7 @@ body {
     }
   }
   .logoo {
-    top: 77%;
+    top: calc(50% + 100px);
     height: 24px;
     width: 88px;
   }
@@ -381,6 +1143,108 @@ body {
     line-height: 20px;
     top: calc(10% + 145px);
     width: 376px;
+  }
+  @keyframes movet1 {
+    from {
+      font-size: 24px;
+      top: calc(10% + 53px);
+      width: 400px;    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+        font-size: 24px;
+        top: calc(10% + 53px);
+        width: 400px;    }
+  }
+  @keyframes movet2 {
+    from {
+      top: calc(10% + 85px);
+      width: 300px;
+    }
+    to {
+      visibility: hidden;
+        opacity: 0;
+        top: calc(10% + 85px);
+        width: 300px;
+  }
+  }
+  @keyframes movep1 {
+    from {
+      opacity: 100%;
+      visibility: visible;
+    }
+    to {
+        opacity: 0%;
+        visibility: hidden;
+    }
+  }
+  @keyframes moveLogoo {
+    from {
+      top: calc(95% - 50px);
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+        top: calc(95% - 50px);
+      }
+  }
+  @keyframes movelinkedin {
+    from {
+      visibility: visible;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+  }
+  @keyframes moveinstagram {
+    from {
+      visibility: visible;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+  }
+  @keyframes movep2 {
+    from {
+      visibility: visible;
+    }
+    to {
+      visibility: visible;
+      transform: scale(1.2);
+      top: calc(60% - 10px);
+      left: calc(0% + 20px);
+    }
+  }
+  @keyframes movep2R {
+    from {
+      visibility: visible;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+  }
+  @keyframes movep3 {
+    from {
+      visibility: visible;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+  }
+  @keyframes movep3R {
+    from {
+      visibility: visible;
+    }
+    to {
+      visibility: visible;
+      transform: scale(1.2);
+      top: calc(60% - 10px);
+      left: calc(100% - 150px);
+    }
   }
 }
 @media only screen and (min-width: 426px) and (max-height: 564px) {
@@ -497,7 +1361,42 @@ body {
 }
 }
 @media only screen and (min-width: 1025px) {
-
+  .bi-house{
+    top: calc(50% - 50px);
+    left: 10%;
+    position:absolute;
+    visibility: hidden;
+  }
+  .arrUpR{
+    top: calc(50% - 155px);
+    left: 10%;
+    position: absolute;
+    visibility: hidden;
+  }
+  .arrDoR{
+    top: calc(50% + 65px);
+    left: 10%;
+    position: absolute;
+    visibility: hidden;
+  }
+  .bi-houseL{
+    top: calc(50% - 50px);
+    left: calc(90% - 100px);
+    position:absolute;
+    visibility: hidden;
+  }
+  .arrUpL{
+    top: calc(50% - 155px);
+    left: calc(90% - 100px);
+    position: absolute;
+    visibility: hidden;
+  }
+  .arrDoL{
+    top: calc(50% + 65px);
+    left: calc(90% - 100px);
+    position: absolute;
+    visibility: hidden;
+  }
   .wrapper-item {
     display: flex;
     align-items: center;
@@ -507,15 +1406,67 @@ body {
   }
   .text {
     font-size: 48px;
-    margin-right: 80px;
+    margin-right: 30px;
   }
   .controls {
     display: flex;
-    justify-content: flex-start; /* Align items to the right */
-    padding-left: 20px; /* Add some right padding */
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 20px;
     visibility: hidden;
+    align-items: 20%;
   }
-  @keyframes showcontrols {
+  @keyframes showarrUpR {
+    from {
+      visibility: hidden;
+      opacity: 0%;
+    }
+    to {
+      opacity: 100%;
+      visibility: visible;
+    }
+  }
+  @keyframes showbi-house {
+    from {
+      visibility: hidden;
+      opacity: 0%;
+    }
+    to {
+      opacity: 100%;
+      visibility: visible;
+    }
+  }
+  @keyframes showarrDoR {
+    from {
+      visibility: hidden;
+      opacity: 0%;
+    }
+    to {
+      opacity: 100%;
+      visibility: visible;
+    }
+  }
+  @keyframes showarrUpL {
+    from {
+      visibility: hidden;
+      opacity: 0%;
+    }
+    to {
+      opacity: 100%;
+      visibility: visible;
+    }
+  }
+  @keyframes showbi-houseL {
+    from {
+      visibility: hidden;
+      opacity: 0%;
+    }
+    to {
+      opacity: 100%;
+      visibility: visible;
+    }
+  }
+  @keyframes showarrDoL {
     from {
       visibility: hidden;
       opacity: 0%;
@@ -534,7 +1485,7 @@ body {
     justify-content: center;
     align-items: center;
     position: absolute; /* Position absolutely on the screen */
-    margin-top: calc(50vh - 740px); /* Center vertically on the screen with a 650px offset */
+    margin-top: calc(50vh - 680px); /* Center vertically on the screen with a 650px offset */
     left: calc(100% - 350px); /* Center horizontally on the screen */
     transform: translateX(-50%); /* Center horizontally with a negative margin */
     transition: transform 0.5s ease-in-out; /* Smooth animation for item movement */
@@ -551,9 +1502,7 @@ body {
   justify-content: right;
   align-items: center;
   transform-origin: 50%;
-  /* Rotate around the center of the item */
   transition: transform 0.5s ease-in-out;
-  /* Smooth animation for item movement */
   font-size: 97px;
   white-space: nowrap; /* Ensure the content appears on one line */
 }
@@ -581,13 +1530,13 @@ body {
   }
   .item-text{
     font-size: 48px;
-    margin-left: 80px;
+    margin-left: 30px;
   }
   .btncontainer {
     display: flex;
     justify-content: flex-end; /* Align items to the right */
     padding-right: 20px; /* Add some right padding */
-    visibility: hidden;
+    /* visibility: hidden; */
   }
   @keyframes showbtn {
     from {
@@ -608,7 +1557,7 @@ body {
     justify-content: center;
     align-items: center;
     position: absolute; /* Position absolutely on the screen */
-    margin-top: calc(50vh - 700px); /* Center vertically on the screen with a 650px offset */
+    margin-top: calc(50vh - 680px); /* Center vertically on the screen with a 650px offset */
     left: 0%; /* Center horizontally on the screen */
     transform: translateX(-50%); /* Center horizontally with a negative margin */
     transition: transform 0.5s ease-in-out; /* Smooth animation for item movement */
@@ -937,6 +1886,34 @@ body {
 }
 }
 @media only screen and (min-width: 2561px) {
+  .circle {
+    width: 2000px; /* Diameter = 2 * radius */
+    height: 2000px; /* Same as diameter for a perfect circle */
+    border: 0px solid #333;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* Position absolutely on the screen */
+    margin-top: calc(50vh - 1000px); /* Center vertically on the screen with a 650px offset */
+    left: calc(100% - 350px); /* Center horizontally on the screen */
+    transform: translateX(-50%); /* Center horizontally with a negative margin */
+    transition: transform 0.5s ease-in-out; /* Smooth animation for item movement */
+}
+.disc {
+  width: 2000px; /* Diameter = 2 * radius */
+  height: 2000px; /* Same as diameter for a perfect circle */
+  border: 0px solid #333;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute; /* Position absolutely on the screen */
+  margin-top: calc(50vh - 1000px); /* Center vertically on the screen with a 650px offset */
+  left: 0%; /* Center horizontally on the screen */
+  transform: translateX(-50%); /* Center horizontally with a negative margin */
+  transition: transform 0.5s ease-in-out; /* Smooth animation for item movement */
+}
 .circleL,
 .circleR {
   left: calc(50% - 405px);
@@ -946,19 +1923,67 @@ body {
   height: 1215;
 }
 @keyframes moveLeft {
-  from {
+  0% {
+    visibility: visible;
   }
-  to {
+  70% {
+    left: calc(0% - 405px);
+    rotate: 90deg;
+  }
+  100% {
+    visibility: hidden;
     left: calc(0% - 405px);
     rotate: 90deg;
   }
 }
 @keyframes moveRight {
+  0% {
+  }
+  70% {
+    left: calc(100% - 405px);
+    rotate: -90deg;
+  }
+  100%{
+    left: calc(100% - 405px);
+    rotate: -90deg;
+    visibility: hidden;
+  }
+}
+.circleLL,
+.circleRR {
+  top: calc(50% - 405px);
+  visibility: hidden;
+}      
+.circleLL{
+    left: calc(0% - 405px);
+}
+.circleRR{
+  left: calc(100% - 405px);
+}
+@keyframes moveLL {
   from {
   }
   to {
-    left: calc(100% - 405px);
-    rotate: -90deg;
+      transform: scale(2.3);
+      visibility: visible;
+  }
+}
+@keyframes moveLLR {
+  from {
+    opacity: 100%;
+    visibility: visible;
+  }
+  to {
+      visibility: hidden;
+      opacity: 0%;
+  }
+}
+@keyframes moveRRR {
+  from {
+  }
+  to {
+      transform: scale(2.3);
+      visibility: visible;
   }
 }
 .logo {
@@ -1039,5 +2064,16 @@ body {
   top: 50%;
   left: calc(100% - 350px);
   width: 200px;
+}
+@keyframes movep3R {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: visible;
+    transform: scale(1.5);
+    top: calc(50% - 20px);
+    left: calc(100% - 600px);
+  }
 }
 }

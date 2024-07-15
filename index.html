@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <section style="overflow: hidden;">
+  <section style="overflow: hidden; height:100vh;">
     <svg class="circleR" width="810" height="810" xmlns="http://www.w3.org/2000/svg" type="button"
       onclick="moveCircles()">
       <circle cx="405" cy="405" r="400" fill="none" stroke="#d4d4d4" stroke="2px" />
@@ -109,8 +109,15 @@
     <p class="p3" type="button" onclick="moveCircleRR()">خط فکری</p>
 
     <div class="btncontainer">
-      <button onclick="moveItemsUp()">Move Up</button>
-      <button onclick="moveItemsDown()">Move Down</button>
+      <svg class="arrUpL" xmlns="http://www.w3.org/2000/svg" width="96" height="96" fill="currentColor" class="bi bi-caret-up" viewBox="0 0 16 16" type="button" onclick="moveItemsUp()">
+        <path d="M3.204 11h9.592L8 5.519zm-.753-.659 4.796-5.48a1 1 0 0 1 1.506 0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 0 1-.753-1.659"/>
+      </svg>
+      <a href="index.html"><svg type="button" xmlns="http://www.w3.org/2000/svg" width="96" height="96" fill="currentColor" class="bi bi-houseL" viewBox="0 0 16 16">
+        <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+      </svg></a>
+      <svg class="arrDoL" xmlns="http://www.w3.org/2000/svg" width="96" height="96" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16" type="button" onclick="moveItemsDown()">
+        <path d="M3.204 5h9.592L8 10.481zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659"/>
+      </svg>
     </div>
     
     <div class="diskmenu">
@@ -132,8 +139,17 @@
   </div>
     
   <div class="controls">
-    <button onclick="rotateElementsUp()">Move Up</button>
-    <button onclick="rotateElementsDown()">Move Down</button>
+    <!-- <button onclick="rotateElementsUp()">Move Up</button> -->
+    <svg class="arrUpR" xmlns="http://www.w3.org/2000/svg" width="96" height="96" fill="currentColor" class="bi bi-caret-up" viewBox="0 0 16 16" type="button" onclick="rotateElementsUp()">
+      <path d="M3.204 11h9.592L8 5.519zm-.753-.659 4.796-5.48a1 1 0 0 1 1.506 0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 0 1-.753-1.659"/>
+    </svg>
+    <a href="index.html"><svg type="button" xmlns="http://www.w3.org/2000/svg" width="96" height="96" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+      <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+    </svg></a>
+    <svg class="arrDoR" xmlns="http://www.w3.org/2000/svg" width="96" height="96" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16" type="button" onclick="rotateElementsDown()">
+      <path d="M3.204 5h9.592L8 10.481zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659"/>
+    </svg>
+    <!-- <button onclick="rotateElementsDown()">Move Down</button> -->
   </div>
   
   <div class="disk-menu">

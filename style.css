@@ -183,36 +183,48 @@ body {
 .bi-house{
   top: calc(50% - 50px);
   left: 10%;
+  height: 30px;
+  width: 30px;
   position:absolute;
   visibility: hidden;
 }
 .arrUpR{
   top: calc(50% - 155px);
   left: 10%;
+  height: 30px;
+  width: 30px;
   position: absolute;
   visibility: hidden;
 }
 .arrDoR{
   top: calc(50% + 65px);
   left: 10%;
+  height: 30px;
+  width: 30px;
   position: absolute;
   visibility: hidden;
 }
 .bi-houseL{
   top: calc(50% - 50px);
   left: calc(90% - 100px);
+  height: 30px;
+  width: 30px;
   position:absolute;
   visibility: hidden;
 }
 .arrUpL{
   top: calc(50% - 155px);
   left: calc(90% - 100px);
+  height: 30px;
+  width: 30px;
   position: absolute;
   visibility: hidden;
 }
 .arrDoL{
   top: calc(50% + 65px);
   left: calc(90% - 100px);
+  height: 30px;
+  width: 30px;
   position: absolute;
   visibility: hidden;
 }
@@ -296,16 +308,16 @@ body {
   }
 }
 .circle {
-  width: 400px; /* Diameter = 2 * radius */
-  height: 400px; /* Same as diameter for a perfect circle */
+  width: 200px; /* Diameter = 2 * radius */
+  height: 200px; /* Same as diameter for a perfect circle */
   border: 0px solid #333;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute; /* Position absolutely on the screen */
-  margin-top: calc(50vh - 200px); /* Center vertically on the screen with a 650px offset */
-  left: calc(100% - 350px); /* Center horizontally on the screen */
+  margin-top: calc(50vh - 100px); /* Center vertically on the screen with a 650px offset */
+  left: calc(100% - 100px); /* Center horizontally on the screen */
   transform: translateX(-50%); /* Center horizontally with a negative margin */
   transition: transform 0.5s ease-in-out; /* Smooth animation for item movement */
 }
@@ -313,7 +325,7 @@ body {
 .element {
 padding-left: 350px;
 position: absolute;
-width: 700px;
+width: 400px;
 height: 50px;
 background: none;
 border-radius: 50%;
@@ -368,15 +380,15 @@ to {
   }
 }
 .disc {
-  width: 400px; /* Diameter = 2 * radius */
-  height: 400px; /* Same as diameter for a perfect circle */
+  width: 200px; /* Diameter = 2 * radius */
+  height: 200px; /* Same as diameter for a perfect circle */
   border: 0px solid #333;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute; /* Position absolutely on the screen */
-  margin-top: calc(50vh - 200px); /* Center vertically on the screen with a 650px offset */
+  margin-top: calc(50vh - 100px); /* Center vertically on the screen with a 650px offset */
   left: 0%; /* Center horizontally on the screen */
   transform: translateX(-50%); /* Center horizontally with a negative margin */
   transition: transform 0.5s ease-in-out; /* Smooth animation for item movement */
@@ -678,6 +690,20 @@ to {
       top: calc(10% + 140px);
     }
   }
+  @keyframes moveLogo {
+    from {
+      height: 66px;
+      width: 127.5px;
+      top: calc(10%)
+    }
+    to {
+        visibility: hidden;
+        opacity: 0%;
+        height: 66px;
+        width: 127.5px;
+        top: calc(10%)
+    }
+  }
   .p2 {
     font-size: 16px;
     line-height: 20.8px;
@@ -697,6 +723,108 @@ to {
     line-height: 15.6px;
     top: calc(10% + 100px);
     width: 284px;
+  }
+  @keyframes movet1 {
+    from {
+      font-size: 24px;
+      top: calc(10% + 53px);
+      width: 400px;    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+        font-size: 24px;
+        top: calc(10% + 53px);
+        width: 400px;    }
+  }
+  @keyframes movet2 {
+    from {
+      top: calc(10% + 85px);
+      width: 300px;
+    }
+    to {
+      visibility: hidden;
+        opacity: 0;
+        top: calc(10% + 85px);
+        width: 300px;
+  }
+  }
+  @keyframes movep1 {
+    from {
+      opacity: 100%;
+      visibility: visible;
+    }
+    to {
+        opacity: 0%;
+        visibility: hidden;
+    }
+  }
+  @keyframes moveLogoo {
+    from {
+      top: calc(95% - 50px);
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+        top: calc(95% - 50px);
+      }
+  }
+  @keyframes movelinkedin {
+    from {
+      visibility: visible;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+  }
+  @keyframes moveinstagram {
+    from {
+      visibility: visible;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+  }
+  @keyframes movep2 {
+    from {
+      visibility: visible;
+    }
+    to {
+      visibility: visible;
+      transform: scale(1.2);
+      top: calc(50% - 10px);
+      left: calc(0% + 20px);
+    }
+  }
+  @keyframes movep2R {
+    from {
+      visibility: visible;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+  }
+  @keyframes movep3 {
+    from {
+      visibility: visible;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+  }
+  @keyframes movep3R {
+    from {
+      visibility: visible;
+    }
+    to {
+      visibility: visible;
+      transform: scale(1.2);
+      top: calc(50% - 10px);
+      left: calc(100% - 100px);
+    }
   }
 }
 @media only screen and (min-width: 426px) and (max-width: 1024px) {

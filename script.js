@@ -114,10 +114,10 @@ const items = document.querySelectorAll('.item');
 radius = 680; // Radius of the disc
 if (window.innerWidth > 2559 ) {
   var radius = 1000; // Radius of the disc
-}else if (window.innerWidth < 426 ) {
-  var radius = 200; // Radius of the disc
 }else if (425 < window.innerWidth && window.innerWidth < 1025 ) {
   var radius = 400; // Radius of the disc
+}if (window.innerWidth < 426 ) {
+  var radius = 100; // Radius of the disc
 }
 let angle = 0;
 
